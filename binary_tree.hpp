@@ -35,3 +35,19 @@ namespace ds_exp
 
             template <typename U>
             explicit node(U &&value, node *parent, std::unique_ptr<node> left,
+                          std::unique_ptr<node> right)
+                :value(std::forward<U>(value)), left_child(std::move(left)), right_child(std::move(right)), parent(parent)
+            {
+            }
+
+            value_type value;
+            std::unique_ptr<node> left_child;
+            std::unique_ptr<node> right_child;
+            node *parent = nullptr;
+        };
+
+        template <typename direction_tag>
+        struct iterate_direction;
+
+        template <>
+        struct iterate_direction<left_first_t>
