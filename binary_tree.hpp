@@ -51,3 +51,16 @@ namespace ds_exp
 
         template <>
         struct iterate_direction<left_first_t>
+        {
+            ~iterate_direction() = default;
+            template <typename T>
+            static auto &first_child(node<T> *p)
+            {
+                return p->left_child;
+            }
+            template <typename T>
+            static auto &second_child(node<T> *p)
+            {
+                return p->right_child;
+            }
+        };
