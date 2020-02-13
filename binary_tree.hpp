@@ -64,3 +64,28 @@ namespace ds_exp
                 return p->right_child;
             }
         };
+
+        template <>
+        struct iterate_direction<right_first_t>
+        {
+            ~iterate_direction() = delete;
+            template <typename T>
+            static auto &first_child(node<T> *p)
+            {
+                return p->right_child;
+            }
+            template <typename T>
+            static auto &second_child(node<T> *p)
+            {
+                return p->left_child;
+            }
+        };
+
+        struct inorder_t
+        {
+            constexpr inorder_t() = default;
+            using inverse = inorder_t;
+        };
+        struct preorder_t;
+        struct postorder_t
+        {
