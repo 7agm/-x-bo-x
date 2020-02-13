@@ -118,3 +118,12 @@ namespace ds_exp
                     current = direction::first_child(current).get();
                 return current;
             }
+            static node_type *next(node_type *current)
+            {
+                assert(current);
+                if (direction::second_child(current))
+                    return begin(direction::second_child(current).get());
+                else
+                    return backtrack(current);
+            }
+            static node_type *backtrack(node_type *current)
