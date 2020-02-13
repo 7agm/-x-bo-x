@@ -89,3 +89,32 @@ namespace ds_exp
         struct preorder_t;
         struct postorder_t
         {
+            constexpr postorder_t() = default;
+            using inverse = preorder_t;
+        };
+        struct preorder_t
+        {
+            constexpr preorder_t() = default;
+            using inverse = postorder_t;
+        };
+        constexpr inorder_t inorder;
+        constexpr preorder_t preorder;
+        constexpr postorder_t postorder;
+
+        template <typename T, typename order, typename dir>
+        struct order_template;
+        template <typename T, typename dir>
+        struct order_template<T, inorder_t, dir>
+        {
+            using node_type = node<T>;
+            using order_type = inorder_t;
+            using direction = iterate_direction<dir>;
+            using inverse_order = order_template<T, order_type::inverse, typename dir::inverse>;
+            static node_type *begin(node_type *root)
+            {
+                assert(root);
+                auto current = root;
+                while (direction::first_child(current))
+                    current = direction::first_child(current).get();
+                return current;
+            }
