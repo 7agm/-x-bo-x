@@ -169,3 +169,25 @@ namespace ds_exp
                     current = current->parent;
                 if (current->parent == nullptr)
                     return nullptr;
+                assert(direction::first_child(current->parent).get() == current &&
+                       direction::second_child(current->parent) != nullptr);
+                return direction::second_child(current->parent).get();
+            }
+        };
+
+        template <typename T, typename dir>
+        struct order_template<T, postorder_t, dir>
+        {
+            using node_type = node<T>;
+            using order_type = postorder_t;
+            using direction = iterate_direction<dir>;
+            using inverse_order = order_template<T, order_type::inverse, typename dir::inverse>;
+            static node_type *begin(node_type *root)
+            {
+                assert(root);
+                auto current = root;
+                while (direction::first_child(current))
+                    current = direction::first_child(current).get();
+                while (direction::second_child(current))
+                {
+                    current = direction::second_child(current).get();
