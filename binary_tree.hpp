@@ -149,3 +149,23 @@ namespace ds_exp
             static node_type *begin(node_type *root)
             {
                 assert(root);
+                return root;
+            }
+            static node_type *next(node_type *current)
+            {
+                assert(current);
+                if (direction::first_child(current))
+                    return direction::first_child(current).get();
+                else if (direction::second_child(current))
+                    return direction::second_child(current).get();
+                else
+                    return backtrack(current);
+            }
+            static node_type *backtrack(node_type *current)
+            {
+                while (current->parent != nullptr &&
+                       (direction::second_child(current->parent).get() == current ||
+                        !direction::second_child(current->parent)))
+                    current = current->parent;
+                if (current->parent == nullptr)
+                    return nullptr;
