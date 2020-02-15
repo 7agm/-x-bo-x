@@ -191,3 +191,16 @@ namespace ds_exp
                 while (direction::second_child(current))
                 {
                     current = direction::second_child(current).get();
+                    while (direction::first_child(current))
+                        current = direction::first_child(current).get();
+                }
+                return current;
+            }
+            static node_type *next(node_type *current)
+            {
+                assert(current);
+                if (current->parent == nullptr)
+                    return nullptr;
+                else if (direction::first_child(current->parent).get() == current &&
+                         direction::second_child(current->parent) != nullptr)
+                    return begin(direction::second_child(current->parent).get());
