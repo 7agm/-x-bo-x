@@ -127,3 +127,25 @@ namespace ds_exp
                     return backtrack(current);
             }
             static node_type *backtrack(node_type *current)
+            {
+                while (current->parent != nullptr && direction::second_child(current->parent).get() == current)
+                    current = current->parent;
+                if (current->parent == nullptr)
+                    return nullptr;
+                assert(direction::first_child(current->parent).get() == current);
+                return current->parent;
+            }
+        };
+
+        template <typename T, typename dir>
+        struct order_template<T, postorder_t, dir>;
+        template <typename T, typename dir>
+        struct order_template<T, preorder_t, dir>
+        {
+            using node_type = node<T>;
+            using order_type = preorder_t;
+            using direction = iterate_direction<dir>;
+            using inverse_order = order_template<T, order_type::inverse, typename dir::inverse>;
+            static node_type *begin(node_type *root)
+            {
+                assert(root);
