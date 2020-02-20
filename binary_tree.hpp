@@ -204,3 +204,25 @@ namespace ds_exp
                 else if (direction::first_child(current->parent).get() == current &&
                          direction::second_child(current->parent) != nullptr)
                     return begin(direction::second_child(current->parent).get());
+                else
+                {
+                    assert(direction::second_child(current->parent).get() == current ||
+                           direction::second_child(current->parent) == nullptr);
+                    return current->parent;
+                }
+            }
+        };
+
+        template <typename T>
+        class binary_tree
+        {
+            using default_order = preorder_t;
+            using default_direction = left_first_t;
+        public:
+            using value_type = T;
+            using node_type = node<value_type>;
+            using handler_type = std::unique_ptr<node_type>;
+            using size_type = std::size_t;
+
+        private:
+            struct base_iter
