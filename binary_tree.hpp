@@ -245,3 +245,20 @@ namespace ds_exp
                 }
             };
             explicit binary_tree(handler_type root)
+                : root_(std::move(root))
+            {
+                if (root_)
+                    root_->parent = nullptr;
+            }
+        public:
+
+            template <typename, typename>
+            class iterator;
+
+            template <typename default_order, typename default_direction>
+            class const_iterator : public base_iter
+            {
+                template <typename, typename>
+                friend
+                class iterator;
+                friend class binary_tree;
