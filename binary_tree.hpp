@@ -226,3 +226,22 @@ namespace ds_exp
 
         private:
             struct base_iter
+            {
+                using difference_type = std::ptrdiff_t;
+                using value_type = binary_tree::value_type;
+                using pointer = value_type *;
+                using reference = value_type &;
+                using iterator_category = std::bidirectional_iterator_tag;
+
+                template <typename iter1, typename iter2>
+                friend bool operator==(iter1 const &lhs, iter2 const &rhs)
+                {
+                    return lhs.node == rhs.node;
+                }
+                template <typename iter1, typename iter2>
+                friend bool operator!=(iter1 const &lhs, iter2 const &rhs)
+                {
+                    return !(lhs == rhs);
+                }
+            };
+            explicit binary_tree(handler_type root)
