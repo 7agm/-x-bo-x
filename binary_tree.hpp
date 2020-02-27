@@ -301,3 +301,21 @@ namespace ds_exp
                 auto &operator--()
                 {
                     return previous(), *this;
+                }
+                auto operator--(int)
+                {
+                    auto iter = *this;
+                    return this->previous(), iter;
+                }
+                template <typename order = default_order, typename direction = default_direction>
+                void next(order = order{}, direction = direction{})
+                {
+                    assert(node);
+                    node = order_template<value_type, order, direction>::next(node);
+                }
+                template <typename order = default_order, typename direction = default_direction>
+                void previous(order = order{}, direction = direction{})
+                {
+                    if (node == nullptr)
+                        node = order_template<value_type, order, direction>::inverse_order::begin(tree->root_.get());
+                    else
