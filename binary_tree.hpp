@@ -280,3 +280,24 @@ namespace ds_exp
                 explicit operator bool() const
                 {
                     return node != nullptr;
+                }
+                value_type const &operator*() const
+                {
+                    return node->value;
+                }
+                value_type const *operator->() const
+                {
+                    return &node->value;
+                }
+                auto &operator++()
+                {
+                    return next(), *this;
+                }
+                auto operator++(int)
+                {
+                    auto iter = *this;
+                    return this->next(), iter;
+                }
+                auto &operator--()
+                {
+                    return previous(), *this;
