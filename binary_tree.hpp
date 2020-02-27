@@ -262,3 +262,21 @@ namespace ds_exp
                 friend
                 class iterator;
                 friend class binary_tree;
+
+                const_iterator(const binary_tree *tree, node_type *p)
+                    : tree(tree), node(p)
+                {
+                }
+
+                const binary_tree *tree;
+                node_type *node;
+            public:
+
+                template <typename order, typename direction>
+                const_iterator(const_iterator<order, direction> const &src)
+                    :tree(src.tree), node(src.node)
+                {
+                }
+                explicit operator bool() const
+                {
+                    return node != nullptr;
