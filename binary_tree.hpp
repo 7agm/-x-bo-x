@@ -346,3 +346,21 @@ namespace ds_exp
                 auto change(order = order{}, direction = direction{}) const
                 {
                     return const_iterator<order, direction>(*this);
+                }
+                template <typename iter1, typename iter2>
+                friend bool operator==(iter1 const &, iter2 const &);
+            };
+
+            template <typename default_order, typename default_direction>
+            class iterator : public base_iter
+            {
+                friend class binary_tree;
+
+                iterator(binary_tree *tree, node_type *p)
+                    : tree(tree), node(p)
+                {
+                }
+
+                binary_tree *tree;
+                node_type *node;
+            public:
