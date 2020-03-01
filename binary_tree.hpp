@@ -364,3 +364,22 @@ namespace ds_exp
                 binary_tree *tree;
                 node_type *node;
             public:
+                template <typename order = default_order, typename direction = default_direction>
+                iterator(iterator<order, direction> const &src)
+                    :tree(src.tree), node(src.node)
+                {
+                }
+                template <typename order, typename direction>
+                operator const_iterator<order, direction>()
+                {
+                    return const_iterator<order, direction>(tree, node);
+                }
+                explicit operator bool() const
+                {
+                    return node != nullptr;
+                }
+                value_type &operator*() const
+                {
+                    return node->value;
+                }
+                value_type *operator->() const
