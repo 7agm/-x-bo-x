@@ -383,3 +383,16 @@ namespace ds_exp
                     return node->value;
                 }
                 value_type *operator->() const
+                {
+                    return &node->value;
+                }
+                auto &operator++()
+                {
+                    return next(), *this;
+                }
+                auto operator++(int)
+                {
+                    auto iter = *this;
+                    return this->next(), iter;
+                }
+                auto &operator--()
