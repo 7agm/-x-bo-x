@@ -413,3 +413,27 @@ namespace ds_exp
                 template <typename order = default_order, typename direction = default_direction>
                 void previous(order = order{}, direction = direction{})
                 {
+                    if (node == nullptr)
+                        node = order_template<value_type, order, direction>::inverse_order::begin(tree->root_.get());
+                    else
+                    {
+                        auto pre = order_template<value_type, order, direction>::inverse_order::next(node);
+                        if (pre != nullptr)
+                            node = pre;
+                    }
+                }
+                template <typename direction = default_direction>
+                iterator first_child(direction = direction{}) const
+                {
+                    assert(node);
+                    return iterator(tree, iterate_direction<direction>::first_child(node).get());
+                }
+                template <typename direction = default_direction>
+                iterator second_child(direction = direction{}) const
+                {
+                    assert(node);
+                    return iterator(tree, iterate_direction<direction>::second_child(node).get());
+                }
+                iterator parent() const
+                {
+                    assert(node &&node->parent);
