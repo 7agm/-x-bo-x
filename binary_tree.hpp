@@ -454,3 +454,25 @@ namespace ds_exp
             binary_tree(binary_tree const &src)
             {
                 set_root(*src.root());
+                for (auto src_iter = src.begin(preorder), dest_iter = cbegin(preorder); src_iter != src.end(); ++src_iter, ++dest_iter)
+                {
+                    if (src_iter.first_child())
+                        new_child(dest_iter, *src_iter.first_child(), default_direction{});
+                    if (src_iter.second_child())
+                        new_child(dest_iter, *src_iter.second_child(), default_direction::inverse{});
+                }
+            }
+            binary_tree &operator=(binary_tree &&) = default;
+            binary_tree &operator=(binary_tree const &src)
+            {
+                *this = binary_tree(src);
+                return *this;
+            }
+
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto begin(order_t order = order_t{}, direction_t direction = direction_t{})
+            {
+                if (!root_)
+                    return end(order, direction);
+                return get_iter<order_t, direction_t>(order_template<value_type, order_t, direction_t>::begin(root_.get()));
+            }
