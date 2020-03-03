@@ -476,3 +476,28 @@ namespace ds_exp
                     return end(order, direction);
                 return get_iter<order_t, direction_t>(order_template<value_type, order_t, direction_t>::begin(root_.get()));
             }
+
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto begin(order_t order = order_t{}, direction_t direction = direction_t{}) const
+            {
+                if (!root_)
+                    return end(order, direction);
+                return get_const_iter<order_t, direction_t>(order_template<value_type, order_t, direction_t>::begin(root_.get()));
+            }
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto cbegin(order_t order = order_t{}, direction_t direction = direction_t{}) const
+            {
+                if (!root_)
+                    return end(order, direction);
+                return begin(order, direction);
+            }
+
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto end(order_t = order_t{}, direction_t = direction_t{})
+            {
+                return get_iter<order_t, direction_t>(nullptr);
+            }
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto end(order_t = order_t{}, direction_t = direction_t{}) const
+            {
+                return get_const_iter<order_t, direction_t>(nullptr);
