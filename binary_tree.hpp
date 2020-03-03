@@ -437,3 +437,20 @@ namespace ds_exp
                 iterator parent() const
                 {
                     assert(node &&node->parent);
+                    return iterator(tree, node->parent);
+                }
+                template <typename order = default_order, typename direction = default_direction>
+                auto change(order = order{}, direction = direction{}) const
+                {
+                    return iterator<order, direction>(*this);
+                }
+
+                template <typename iter1, typename iter2>
+                friend bool operator==(iter1 const &, iter2 const &);
+            };
+
+            binary_tree() = default;
+            binary_tree(binary_tree &&src) = default;
+            binary_tree(binary_tree const &src)
+            {
+                set_root(*src.root());
