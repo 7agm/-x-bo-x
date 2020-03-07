@@ -501,3 +501,20 @@ namespace ds_exp
             auto end(order_t = order_t{}, direction_t = direction_t{}) const
             {
                 return get_const_iter<order_t, direction_t>(nullptr);
+            }
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto cend(order_t = order_t{}, direction_t = direction_t{}) const
+            {
+                return get_const_iter<order_t, direction_t>(nullptr);
+            }
+
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto root(order_t = order_t{}, direction_t = direction_t{})
+            {
+                return get_iter<order_t, direction_t>(root_.get());
+            }
+            template <typename order_t = default_order, typename direction_t = default_direction>
+            auto root(order_t = order_t{}, direction_t = direction_t{}) const
+            {
+                return get_const_iter<order_t, direction_t>(root_.get());
+            }
