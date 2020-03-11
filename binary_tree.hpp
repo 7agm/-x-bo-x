@@ -542,3 +542,25 @@ namespace ds_exp
 
             template <typename iter>
             binary_tree replace(iter replaced, binary_tree &&new_tree)
+            {
+                handler_type *handler = nullptr;
+                if (replaced == root())
+                    handler = &root_;
+                else
+                    handler = &get_handler(replaced.node);
+                auto parent = (*handler)->parent;
+                auto returned = std::move(*handler);
+                *handler = std::move(new_tree.root_);
+                if (*handler)
+                    (*handler)->parent = parent;
+                return binary_tree(returned);
+            }
+
+            template <typename iter>
+            binary_tree remove(iter subtree)
+            {
+                return replace(subtree, binary_tree{});
+            }
+
+            template <typename U>
+            void set_root(U &&u)
