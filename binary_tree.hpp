@@ -564,3 +564,28 @@ namespace ds_exp
 
             template <typename U>
             void set_root(U &&u)
+            {
+                root_ = make_handler(std::forward<U>(u), nullptr);
+            }
+            template <typename direction, typename iter, typename U>
+            iter new_child(iter parent, U &&u, direction = direction{})
+            {
+                auto &child = iterate_direction<direction>::first_child(parent.node);
+                child = make_handler(std::forward<U>(u), parent.node);
+                return iter(this, child.get());
+            }
+            template <typename iter, typename direction_t>
+            binary_tree replace_child(iter parent, binary_tree &&tree, direction_t = direction_t{})
+            {
+                auto &child = iterate_direction<direction_t>::first_child(parent.node);
+                auto replaced = std::move(child);
+                child = std::move(tree.root_);
+                if (child)
+                    child->parent = parent.node;
+                return binary_tree(std::move(replaced));
+            }
+
+            friend bool operator==(binary_tree const &lhs, binary_tree const &rhs)
+            {
+                auto left_iter = lhs.begin(preorder), right_iter = rhs.begin(preorder);
+                for (; left_iter != lhs.end() && right_iter != rhs.end(); ++left_iter, ++right_iter)
