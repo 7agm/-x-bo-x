@@ -518,3 +518,27 @@ namespace ds_exp
             {
                 return get_const_iter<order_t, direction_t>(root_.get());
             }
+
+            void clear()
+            {
+                root_.reset();
+            }
+            bool empty() const
+            {
+                return root() == end();
+            }
+            std::size_t depth() const
+            {
+                return subtree_depth(root());
+            }
+            template <typename iter>
+            std::size_t subtree_depth(iter subtree_root) const
+            {
+                if (subtree_root == end())
+                    return 0;
+                auto i = std::max(subtree_depth(subtree_root.first_child()), subtree_depth(subtree_root.second_child())) + 1;
+                return i;
+            }
+
+            template <typename iter>
+            binary_tree replace(iter replaced, binary_tree &&new_tree)
