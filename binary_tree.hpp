@@ -589,3 +589,22 @@ namespace ds_exp
             {
                 auto left_iter = lhs.begin(preorder), right_iter = rhs.begin(preorder);
                 for (; left_iter != lhs.end() && right_iter != rhs.end(); ++left_iter, ++right_iter)
+                {
+                    if (*left_iter != *right_iter)
+                        return false;
+                }
+                return left_iter == right_iter;
+            }
+        private:
+
+            template <typename default_order, typename default_direction>
+            auto get_iter(node_type *p)
+            {
+                return iterator<default_order, default_direction>{this, p};
+            }
+            template <typename default_order, typename default_direction>
+            auto get_const_iter(node_type *p) const
+            {
+                return const_iterator<default_order, default_direction>{this, p};
+            }
+            auto &get_handler(node_type *p)
