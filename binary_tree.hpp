@@ -608,3 +608,22 @@ namespace ds_exp
                 return const_iterator<default_order, default_direction>{this, p};
             }
             auto &get_handler(node_type *p)
+            {
+                if (p->parent->left_child.get() == p)
+                    return p->parent->left_child;
+                else
+                    return p->parent->right_child;
+            }
+            template <typename U>
+            auto make_handler(U &&u, node_type *parent = nullptr, handler_type left = nullptr, handler_type right = nullptr)
+            {
+                return std::make_unique<node_type>(std::forward<U>(u), parent, std::move(left), std::move(right));
+            }
+            handler_type root_;
+        };
+
+        template <typename tree_t, typename order_t, typename dir_t>
+        class iterate_adapter
+        {
+        public:
+            explicit iterate_adapter(tree_t &&tree)
