@@ -627,3 +627,24 @@ namespace ds_exp
         {
         public:
             explicit iterate_adapter(tree_t &&tree)
+                :tree(tree)
+            {
+            }
+
+            auto begin()
+            {
+                return tree.begin(order_t{}, dir_t{});
+            }
+            auto cbegin()
+            {
+                return tree.cbegin(order_t{}, dir_t{});
+            }
+            auto end()
+            {
+                return tree.end(order_t{}, dir_t{});
+            }
+            auto cend()
+            {
+                return tree.cend(order_t{}, dir_t{});
+            }
+            tree_t &&tree;
