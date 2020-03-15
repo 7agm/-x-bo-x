@@ -648,3 +648,13 @@ namespace ds_exp
                 return tree.cend(order_t{}, dir_t{});
             }
             tree_t &&tree;
+        };
+        template <typename tree_t, typename order_t, typename dir_t = left_first_t>
+        auto tree_iterate(tree_t &&tree, order_t = order_t{}, dir_t = dir_t{})
+        {
+            return iterate_adapter<tree_t, order_t, dir_t>(std::forward<tree_t>(tree));
+        }
+    }
+}
+
+#endif //INC_201703_BINARY_TREE_HPP
