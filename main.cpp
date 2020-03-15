@@ -7,3 +7,11 @@
 
 int main()
 {
+    std::cout<<std::boolalpha;
+    test_binary_tree();
+    test_tree_parse();
+    test_tree_adapter();
+    ds_exp::console_ui<std::string, std::string> ui;
+    ui.execute();
+    return 0;
+}
