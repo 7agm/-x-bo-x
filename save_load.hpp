@@ -22,3 +22,25 @@ namespace ds_exp
             stream << t;
             auto output = stream.str();
             for (auto iter = output.begin(); iter != output.end(); ++iter)
+            {
+                if (((*iter == escaped) || ...))
+                {
+                    iter = output.insert(iter, '\\');
+                    ++iter;
+                }
+            }
+            return out << output;
+
+        }
+        inline void print_null(std::ostream &out)
+        {
+            out << "null";
+        }
+        template <typename Iter>
+        void print_node(std::ostream &out, Iter iter)
+        {
+            if (!iter)
+            {
+                print_null(out);
+                return;
+            }
