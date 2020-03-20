@@ -26,3 +26,29 @@ void test_binary_tree()
     assert(*left.second_child() == "left right");
     {
         auto inorder_iter = tree.begin(inorder);
+        assert(inorder_iter == left_left);
+        assert(++inorder_iter == left);
+        assert(++inorder_iter == left_right);
+        assert(++inorder_iter == root);
+        assert(++inorder_iter == right);
+        assert(++inorder_iter == tree.end());
+        assert(--inorder_iter == right);
+        assert(--inorder_iter == root);
+        assert(--inorder_iter == left_right);
+        assert(--inorder_iter == left);
+        assert(--inorder_iter == left_left);
+    }
+    {
+        auto preorder_iter = tree.begin(preorder);
+        assert(preorder_iter == root);
+        assert(++preorder_iter == left);
+        assert(++preorder_iter == left_left);
+        assert(++preorder_iter == left_right);
+        assert(++preorder_iter == right);
+        assert(++preorder_iter == tree.end());
+        assert(--preorder_iter == right);
+        assert(--preorder_iter == left_right);
+        assert(--preorder_iter == left_left);
+        assert(--preorder_iter == left);
+        assert(--preorder_iter == root);
+    }
