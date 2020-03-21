@@ -52,3 +52,22 @@ void test_binary_tree()
         assert(--preorder_iter == left);
         assert(--preorder_iter == root);
     }
+    {
+        auto postorder_iter = tree.begin(postorder);
+        assert(postorder_iter == left_left);
+        assert(++postorder_iter == left_right);
+        assert(++postorder_iter == left);
+        assert(++postorder_iter == right);
+        assert(++postorder_iter == root);
+        assert(++postorder_iter == tree.end());
+        assert(--postorder_iter == root);
+        assert(--postorder_iter == right);
+        assert(--postorder_iter == left);
+        assert(--postorder_iter == left_right);
+        assert(--postorder_iter == left_left);
+    }
+    {
+        auto tree2 = tree;
+        assert(tree2 == tree);
+    }
+}
