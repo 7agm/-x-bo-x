@@ -3,4 +3,4 @@
 
 void test_binary_tree();
 
-#endif //INC_201703_TEST_BINARY_TREE_
+#endif //INC_201703_TEST_BINARY_TREE_HPP
