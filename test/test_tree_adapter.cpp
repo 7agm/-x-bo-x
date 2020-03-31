@@ -3,4 +3,5 @@
 
 void test_tree_adapter()
 {
-    using 
+    using namespace ds_exp;
+   
