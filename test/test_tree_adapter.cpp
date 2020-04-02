@@ -5,4 +5,5 @@ void test_tree_adapter()
 {
     using namespace ds_exp;
     using namespace std::literals;
-    tree_adapter<std::string, i
+    tree_adapter<std::string, int> adapter;
+    st
