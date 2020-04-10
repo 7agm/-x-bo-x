@@ -10,4 +10,4 @@ void test_tree_adapter()
     adapter.InitBiTree();
     adapter.DestroyBiTree();
     adapter.CreateBiTree(definition);
-  
+    adapter.ClearBiTr
