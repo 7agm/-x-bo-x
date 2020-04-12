@@ -11,4 +11,5 @@ void test_tree_adapter()
     adapter.DestroyBiTree();
     adapter.CreateBiTree(definition);
     adapter.ClearBiTree();
-    assert(adapt
+    assert(adapter.BiTreeEmpty());
+ 
