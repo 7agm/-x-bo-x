@@ -14,4 +14,4 @@ void test_tree_adapter()
     assert(adapter.BiTreeEmpty());
     adapter.CreateBiTree(definition);
     assert(adapter.BiTreeDepth() == 3);
-    
+    assert(get_value(*adapt
