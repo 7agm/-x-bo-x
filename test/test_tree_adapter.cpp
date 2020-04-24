@@ -15,4 +15,5 @@ void test_tree_adapter()
     adapter.CreateBiTree(definition);
     assert(adapter.BiTreeDepth() == 3);
     assert(get_value(*adapter.Root()) == 1);
-    auto value = adapter.Value("left 
+    auto value = adapter.Value("left left");
+    ass
