@@ -20,4 +20,4 @@ void test_tree_adapter()
     adapter.Assign("left", 5);
     assert(adapter.Value("left") == 5);
     adapter.Assign("left", 2);
-    assert(adapte
+    assert(adapter.Parent("left") == adapt
