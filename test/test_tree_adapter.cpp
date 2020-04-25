@@ -19,4 +19,5 @@ void test_tree_adapter()
     assert(value == 3);
     adapter.Assign("left", 5);
     assert(adapter.Value("left") == 5);
-    adapter.Assign("left", 2)
+    adapter.Assign("left", 2);
+    assert(adapte
