@@ -22,4 +22,4 @@ void test_tree_adapter()
     adapter.Assign("left", 2);
     assert(adapter.Parent("left") == adapter.Root());
     assert(get_value(*adapter.Child("left", left_child)) == 3);
-    asser
+    assert(get_value(*ad
