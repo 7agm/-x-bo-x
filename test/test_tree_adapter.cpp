@@ -24,4 +24,4 @@ void test_tree_adapter()
     assert(get_value(*adapter.Child("left", left_child)) == 3);
     assert(get_value(*adapter.Child("right", right_child)) == 5);
     assert(get_value(*adapter.Sibling("left", right_child)) == 4);
-    assert(get_value(*adapter.Sibling("right
+    assert(get_value(*adapter.Sibling("right", left_child)) == 
