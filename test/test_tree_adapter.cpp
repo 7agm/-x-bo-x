@@ -27,4 +27,4 @@ void test_tree_adapter()
     assert(get_value(*adapter.Sibling("right", left_child)) == 2);
     auto right_node = adapter.Child("root", right_child);
     decltype(adapter) new_adapter;
-    new_adapter.Cre
+    new_adapter.CreateBiTree(definition
