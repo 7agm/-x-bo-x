@@ -31,4 +31,4 @@ void test_tree_adapter()
     adapter.InsertChild<right_t>(right_node, new_adapter);
     decltype(adapter) equals;
     equals.CreateBiTree(
-       
+        R"~([(root, 
