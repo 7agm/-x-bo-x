@@ -28,4 +28,4 @@ void test_tree_adapter()
     auto right_node = adapter.Child("root", right_child);
     decltype(adapter) new_adapter;
     new_adapter.CreateBiTree(definition);
-    adapter.InsertChild<right_t
+    adapter.InsertChild<right_t>(right_node, 
