@@ -29,4 +29,5 @@ void test_tree_adapter()
     decltype(adapter) new_adapter;
     new_adapter.CreateBiTree(definition);
     adapter.InsertChild<right_t>(right_node, new_adapter);
-    decltype(adapter) equ
+    decltype(adapter) equals;
+    equals.Cr
