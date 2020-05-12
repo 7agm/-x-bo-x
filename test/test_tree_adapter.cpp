@@ -35,4 +35,4 @@ void test_tree_adapter()
     assert(adapter == equals);
     auto parent_of_replaced = adapter.Child("right", right_child, inorder, right_first);
     assert(get_key(*parent_of_replaced) == "right right");
-  
+    auto repl
