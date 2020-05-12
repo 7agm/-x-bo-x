@@ -33,4 +33,4 @@ void test_tree_adapter()
     equals.CreateBiTree(
         R"~([(root, 1), (left, 2),(left left,3),null,null,null,(right,4),null, (root, 1), (left,2),(left left,3),null,null,null,(right,4),null,(right right, 5),null, (right right,5),null,null])~");
     assert(adapter == equals);
-    aut
+    auto parent_of_replaced 
