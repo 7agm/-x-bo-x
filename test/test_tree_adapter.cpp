@@ -34,4 +34,5 @@ void test_tree_adapter()
         R"~([(root, 1), (left, 2),(left left,3),null,null,null,(right,4),null, (root, 1), (left,2),(left left,3),null,null,null,(right,4),null,(right right, 5),null, (right right,5),null,null])~");
     assert(adapter == equals);
     auto parent_of_replaced = adapter.Child("right", right_child, inorder, right_first);
-    assert(get_key(*parent_of_replaced) ==
+    assert(get_key(*parent_of_replaced) == "right right");
+  
