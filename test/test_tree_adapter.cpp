@@ -32,4 +32,5 @@ void test_tree_adapter()
     decltype(adapter) equals;
     equals.CreateBiTree(
         R"~([(root, 1), (left, 2),(left left,3),null,null,null,(right,4),null, (root, 1), (left,2),(left left,3),null,null,null,(right,4),null,(right right, 5),null, (right right,5),null,null])~");
-    assert(adapter
+    assert(adapter == equals);
+    aut
