@@ -38,4 +38,5 @@ void test_tree_adapter()
     auto replaced = adapter.DeleteChild(parent_of_replaced, right_child);
     adapter.DeleteChild(right_node, right_child);
     adapter.InsertChild(right_node, replaced, right_child);
-    equals.Crea
+    equals.CreateBiTree(definition);
+  
