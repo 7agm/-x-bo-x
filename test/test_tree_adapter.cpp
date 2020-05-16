@@ -40,3 +40,4 @@ void test_tree_adapter()
     adapter.InsertChild(right_node, replaced, right_child);
     equals.CreateBiTree(definition);
     assert(adapter == equals);
+}
