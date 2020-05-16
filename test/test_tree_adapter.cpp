@@ -36,4 +36,4 @@ void test_tree_adapter()
     auto parent_of_replaced = adapter.Child("right", right_child, inorder, right_first);
     assert(get_key(*parent_of_replaced) == "right right");
     auto replaced = adapter.DeleteChild(parent_of_replaced, right_child);
-    adapter.Dele
+    adapter.DeleteChild(right_node
