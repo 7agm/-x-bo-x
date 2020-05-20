@@ -24,3 +24,12 @@ void test_tree_parse()
     assert(iter->value == 3);
     ++iter;
     assert(iter->key == ")");
+    assert(iter->value == 4);
+    std::ostringstream ostream;
+    ostream << tree;
+    auto output = ostream.str();
+    std::istringstream new_istream(output);
+    decltype(tree) new_tree;
+    new_istream >> new_tree;
+    assert(tree == new_tree);
+}
