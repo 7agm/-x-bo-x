@@ -13,4 +13,5 @@
 namespace ds_exp
 {
     inline namespace adapter
-  
+    {
+        class null_
