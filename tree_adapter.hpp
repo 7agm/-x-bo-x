@@ -12,4 +12,5 @@
 
 namespace ds_exp
 {
-    inline nam
+    inline namespace adapter
+  
