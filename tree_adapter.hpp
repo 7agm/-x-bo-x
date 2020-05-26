@@ -15,4 +15,6 @@ namespace ds_exp
     inline namespace adapter
     {
         class null_value_tag;
-        namesp
+        namespace detail
+        {
+ 
