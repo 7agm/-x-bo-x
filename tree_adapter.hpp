@@ -18,4 +18,5 @@ namespace ds_exp
         namespace detail
         {
             template <typename Key, typename Value>
-            s
+            struct stored_t
+           
