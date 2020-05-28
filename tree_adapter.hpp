@@ -22,4 +22,4 @@ namespace ds_exp
             {
                 Key key;
                 Value value;
-                friend
+                friend std::ostream &operator
