@@ -21,4 +21,5 @@ namespace ds_exp
             struct stored_t
             {
                 Key key;
-         
+                Value value;
+     
