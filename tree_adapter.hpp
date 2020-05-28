@@ -22,4 +22,5 @@ namespace ds_exp
             {
                 Key key;
                 Value value;
-                friend std::ostream &operator<<(std::ostream &out, stored_t const &
+                friend std::ostream &operator<<(std::ostream &out, stored_t const &s)
+            
