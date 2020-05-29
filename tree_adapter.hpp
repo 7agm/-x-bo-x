@@ -25,4 +25,5 @@ namespace ds_exp
                 friend std::ostream &operator<<(std::ostream &out, stored_t const &s)
                 {
                     escape(out, s.key, ',', '\\') << ",";
-                    escape(out, s.value, ',', 
+                    escape(out, s.value, ',', '\\');
+            
