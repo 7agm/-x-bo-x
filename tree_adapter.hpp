@@ -26,4 +26,5 @@ namespace ds_exp
                 {
                     escape(out, s.key, ',', '\\') << ",";
                     escape(out, s.value, ',', '\\');
-            
+                    return out;
+ 
