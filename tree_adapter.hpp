@@ -32,4 +32,5 @@ namespace ds_exp
             template <typename T>
             auto const &get_key(T const &t)
             {
-              
+                return t;
+       
