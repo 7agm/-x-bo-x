@@ -35,4 +35,5 @@ namespace ds_exp
                 return t;
             }
             template <typename Key, typename Value>
-            auto const &get_key(stored_t<Key, Va
+            auto const &get_key(stored_t<Key, Value> const &s)
+   
