@@ -37,4 +37,4 @@ namespace ds_exp
             template <typename Key, typename Value>
             auto const &get_key(stored_t<Key, Value> const &s)
             {
-   
+                return get_key(
