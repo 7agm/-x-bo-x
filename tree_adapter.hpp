@@ -44,4 +44,5 @@ namespace ds_exp
             {
                 return get_key(lhs) < get_key(rhs);
             }
-            template <typename Key1, typename Value1
+            template <typename Key1, typename Value1, typename Key2>
+ 
