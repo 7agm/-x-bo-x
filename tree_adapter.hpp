@@ -47,4 +47,4 @@ namespace ds_exp
             template <typename Key1, typename Value1, typename Key2>
             bool operator<(stored_t<Key1,Value1> const &lhs, Key2 const &rhs)
             {
-      
+                return get_k
