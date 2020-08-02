@@ -53,4 +53,5 @@ namespace ds_exp
             bool operator<(Key1 const &lhs, stored_t<Key2, Value2> const &rhs)
             {
                 return lhs < get_key(rhs);
-  
+            }
+          
