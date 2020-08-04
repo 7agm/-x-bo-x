@@ -57,4 +57,4 @@ namespace ds_exp
             template <typename t1, typename t2>
             struct support_equality
             {
-                t
+                template <typename r1
