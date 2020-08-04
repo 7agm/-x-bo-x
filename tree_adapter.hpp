@@ -55,4 +55,5 @@ namespace ds_exp
                 return lhs < get_key(rhs);
             }
             template <typename t1, typename t2>
-            struct 
+            struct support_equality
+          
