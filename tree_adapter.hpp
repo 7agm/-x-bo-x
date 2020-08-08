@@ -58,4 +58,4 @@ namespace ds_exp
             struct support_equality
             {
                 template <typename r1, typename r2, typename Ret = decltype(get_key(std::declval<r1>()) == get_key(std::declval<r2>()))>
-           
+                static Ret hel
