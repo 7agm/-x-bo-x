@@ -61,4 +61,5 @@ namespace ds_exp
                 static Ret helper(int)
                 {}
                 template <typename , typename, typename T = void>
-                static T help
+                static T helper(double)
+       
