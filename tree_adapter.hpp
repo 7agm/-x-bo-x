@@ -60,4 +60,5 @@ namespace ds_exp
                 template <typename r1, typename r2, typename Ret = decltype(get_key(std::declval<r1>()) == get_key(std::declval<r2>()))>
                 static Ret helper(int)
                 {}
-                template <typename , typename, typename T =
+                template <typename , typename, typename T = void>
+           
