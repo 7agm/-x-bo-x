@@ -63,4 +63,4 @@ namespace ds_exp
                 template <typename , typename, typename T = void>
                 static T helper(double)
                 {}
-                constexpr static 
+                constexpr static bool value = std::is
