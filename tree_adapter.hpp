@@ -63,4 +63,4 @@ namespace ds_exp
                 template <typename , typename, typename T = void>
                 static T helper(double)
                 {}
-                constexpr static bool value = std::is_convertible_v<d
+                constexpr static bool value = std::is_convertible_v<decltype(helper<t1,t2>(0)), 
