@@ -65,4 +65,4 @@ namespace ds_exp
                 {}
                 constexpr static bool value = std::is_convertible_v<decltype(helper<t1,t2>(0)), bool>;
             };
-            template <typename t1, typename t2, std::enable_if_t
+            template <typename t1, typename t2, std::enable_if_t<support_equality<t1, t2>:
