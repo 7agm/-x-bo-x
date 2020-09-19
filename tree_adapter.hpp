@@ -69,3 +69,5 @@ namespace ds_exp
             bool operator==(t1 const &lhs, t2 const &rhs)
             {
                 return get_key(lhs) == get_key(rhs);
+            }
+       
