@@ -70,4 +70,5 @@ namespace ds_exp
             {
                 return get_key(lhs) == get_key(rhs);
             }
-            template <typename t1, typename t2, std::enable_if_t<!support_equality<t1, t2>::val
+            template <typename t1, typename t2, std::enable_if_t<!support_equality<t1, t2>::value, int> = 0>
+         
