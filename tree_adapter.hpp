@@ -73,4 +73,4 @@ namespace ds_exp
             template <typename t1, typename t2, std::enable_if_t<!support_equality<t1, t2>::value, int> = 0>
             bool operator==(t1 const &lhs, t2 const &rhs)
             {
-             
+                return !(get_
