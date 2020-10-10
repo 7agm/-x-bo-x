@@ -76,4 +76,4 @@ namespace ds_exp
                 return !(get_key(lhs) < get_key(rhs)) && !(get_key(rhs) < get_key(rhs));
             }
             template <typename T1, typename T2>
-            bool
+            bool operator!=(T1 
