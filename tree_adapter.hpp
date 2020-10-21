@@ -80,4 +80,5 @@ namespace ds_exp
             {
                 return !(lhs == rhs);
             }
-            template <typename
+            template <typename T>
+            auto &get_val
