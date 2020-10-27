@@ -86,4 +86,5 @@ namespace ds_exp
                 return t;
             }
             template <typename T>
-            auto &get_
+            auto &get_value(T const &t)
+   
