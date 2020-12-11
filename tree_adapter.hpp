@@ -94,4 +94,5 @@ namespace ds_exp
             auto &get_value(stored_t<Key, Value> const &s)
             {
                 return get_value(s.value);
-        
+            }
+         
