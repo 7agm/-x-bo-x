@@ -95,4 +95,5 @@ namespace ds_exp
             {
                 return get_value(s.value);
             }
-            template <typename Key, type
+            template <typename Key, typename Value>
+          
