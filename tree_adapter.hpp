@@ -98,4 +98,7 @@ namespace ds_exp
             template <typename Key, typename Value>
             auto &get_value(stored_t<Key, Value> &s)
             {
-                return get_value(s.value
+                return get_value(s.value);
+            }
+
+  
