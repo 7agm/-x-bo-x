@@ -101,4 +101,4 @@ namespace ds_exp
                 return get_value(s.value);
             }
 
-  
+            template <type
