@@ -105,4 +105,5 @@ namespace ds_exp
             struct value_traits
             {
                 using type = stored_t<Key, Value>;
-                using key_type
+                using key_type = Key;
+     
