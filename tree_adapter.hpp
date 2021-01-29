@@ -106,4 +106,5 @@ namespace ds_exp
             {
                 using type = stored_t<Key, Value>;
                 using key_type = Key;
-                using va
+                using value_type = Value;
+        
