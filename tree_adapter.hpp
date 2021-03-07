@@ -116,4 +116,4 @@ namespace ds_exp
                 using value_type = Key;
             };
             template <typename Key, typename Value>
-            void assign_element(std::string str, de
+            void assign_element(std::string str, detail::stored_t<Key, Value> &v
