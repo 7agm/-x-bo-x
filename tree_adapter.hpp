@@ -119,3 +119,4 @@ namespace ds_exp
             void assign_element(std::string str, detail::stored_t<Key, Value> &v)
             {
                 using ds_exp::assign_element;
+                std
