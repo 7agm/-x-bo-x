@@ -120,4 +120,4 @@ namespace ds_exp
             {
                 using ds_exp::assign_element;
                 std::istringstream source(str);
-                auto key_input = parse::detai
+                auto key_input = parse::detail::read_until(sour
