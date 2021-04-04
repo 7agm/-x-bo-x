@@ -121,4 +121,5 @@ namespace ds_exp
                 using ds_exp::assign_element;
                 std::istringstream source(str);
                 auto key_input = parse::detail::read_until(source, true, ',');
-                parse::detail::force_read_char(source, 
+                parse::detail::force_read_char(source, ',');
+                a
