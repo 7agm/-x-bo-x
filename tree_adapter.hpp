@@ -125,4 +125,5 @@ namespace ds_exp
                 auto value_input = parse::detail::read_until(source, true);
                 assign_element(std::move(key_input), v.key);
                 assign_element(std::move(value_input), v.value);
- 
+            }
+        }
