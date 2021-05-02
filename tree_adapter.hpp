@@ -128,4 +128,5 @@ namespace ds_exp
             }
         }
         using detail::get_key;
-        using detail::get_va
+        using detail::get_value;
+        using detail::valu
