@@ -136,4 +136,5 @@ namespace ds_exp
         template <typename Key_t, typename Value_t = null_value_tag>
         class tree_adapter
         {
-  
+        public:
+        
