@@ -137,4 +137,5 @@ namespace ds_exp
         class tree_adapter
         {
         public:
-            using element_type = typename value_traits<Key_
+            using element_type = typename value_traits<Key_t, Value_t>::type;
+         
