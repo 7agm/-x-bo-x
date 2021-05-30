@@ -138,4 +138,5 @@ namespace ds_exp
         {
         public:
             using element_type = typename value_traits<Key_t, Value_t>::type;
-            using tree_type = binary_
+            using tree_type = binary_tree<element_type>;
+  
