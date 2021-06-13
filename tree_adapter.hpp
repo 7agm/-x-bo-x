@@ -143,4 +143,6 @@ namespace ds_exp
             using value_type = typename value_traits<Key_t, Value_t>::value_type;
 
         private:
-            std::
+            std::optional<tree_type> tree;
+
+      
