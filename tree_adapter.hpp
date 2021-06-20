@@ -147,3 +147,5 @@ namespace ds_exp
 
             tree_adapter(tree_type &&tree)
                 :tree(std::move(tree))
+            {}
+    
