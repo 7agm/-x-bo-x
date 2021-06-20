@@ -146,4 +146,4 @@ namespace ds_exp
             std::optional<tree_type> tree;
 
             tree_adapter(tree_type &&tree)
-         
+                :tree(std::move(tree))
