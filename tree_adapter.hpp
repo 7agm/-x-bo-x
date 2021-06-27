@@ -149,4 +149,4 @@ namespace ds_exp
                 :tree(std::move(tree))
             {}
         public:
-            struct tree_exist
+            struct tree_exists : std::logic_err
