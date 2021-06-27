@@ -149,4 +149,4 @@ namespace ds_exp
                 :tree(std::move(tree))
             {}
         public:
-            st
+            struct tree_exist
