@@ -152,4 +152,4 @@ namespace ds_exp
             struct tree_exists : std::logic_error
             {
                 explicit tree_exists(std::string const &function)
-                    : logi
+                    : logic_error("The tree alre
