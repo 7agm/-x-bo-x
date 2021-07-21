@@ -154,4 +154,5 @@ namespace ds_exp
                 explicit tree_exists(std::string const &function)
                     : logic_error("The tree already exists in function "s + function + ".")
                 {
- 
+                }
+   
