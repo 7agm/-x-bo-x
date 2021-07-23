@@ -155,4 +155,5 @@ namespace ds_exp
                     : logic_error("The tree already exists in function "s + function + ".")
                 {
                 }
-   
+            };
+         
