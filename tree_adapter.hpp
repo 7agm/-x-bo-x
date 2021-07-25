@@ -156,4 +156,4 @@ namespace ds_exp
                 {
                 }
             };
-            struct tree_
+            struct tree_not_exist : std::logi
