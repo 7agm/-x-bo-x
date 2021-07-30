@@ -158,4 +158,4 @@ namespace ds_exp
             };
             struct tree_not_exist : std::logic_error
             {
-                explicit tree_not_exi
+                explicit tree_not_exist(std::string const &function)
