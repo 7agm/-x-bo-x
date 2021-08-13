@@ -159,4 +159,4 @@ namespace ds_exp
             struct tree_not_exist : std::logic_error
             {
                 explicit tree_not_exist(std::string const &function)
-                    : logic_error("The tree doesn't exist in function
+                    : logic_error("The tree doesn't exist in function "s + function + "."
