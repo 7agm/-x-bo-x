@@ -161,4 +161,5 @@ namespace ds_exp
                 explicit tree_not_exist(std::string const &function)
                     : logic_error("The tree doesn't exist in function "s + function + ".")
                 {
- 
+                }
+  
