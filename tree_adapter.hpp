@@ -162,4 +162,5 @@ namespace ds_exp
                     : logic_error("The tree doesn't exist in function "s + function + ".")
                 {
                 }
-  
+            };
+ 
