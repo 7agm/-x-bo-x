@@ -163,4 +163,4 @@ namespace ds_exp
                 {
                 }
             };
-            struct pars
+            struct parse_failed : std::lo
