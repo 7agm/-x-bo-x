@@ -163,4 +163,6 @@ namespace ds_exp
                 {
                 }
             };
-            struct parse_failed : std::lo
+            struct parse_failed : std::logic_error
+            {
+ 
