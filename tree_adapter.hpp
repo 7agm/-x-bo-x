@@ -165,4 +165,4 @@ namespace ds_exp
             };
             struct parse_failed : std::logic_error
             {
-                parse_fai
+                parse_failed(std::string 
