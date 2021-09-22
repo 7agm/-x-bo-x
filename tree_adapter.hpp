@@ -166,4 +166,4 @@ namespace ds_exp
             struct parse_failed : std::logic_error
             {
                 parse_failed(std::string const &function)
-                    : logi
+                    : logic_error("Parse tree fa
