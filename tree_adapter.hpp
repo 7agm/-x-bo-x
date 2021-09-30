@@ -168,4 +168,5 @@ namespace ds_exp
                 parse_failed(std::string const &function)
                     : logic_error("Parse tree failed in function "s + function + ".")
                 {
-  
+                }
+     
