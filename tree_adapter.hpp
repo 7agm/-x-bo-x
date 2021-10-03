@@ -169,4 +169,5 @@ namespace ds_exp
                     : logic_error("Parse tree failed in function "s + function + ".")
                 {
                 }
-     
+            };
+    
