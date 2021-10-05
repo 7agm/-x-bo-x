@@ -170,4 +170,4 @@ namespace ds_exp
                 {
                 }
             };
-            struct prec
+            struct precondition_failed_to_s
