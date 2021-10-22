@@ -173,4 +173,4 @@ namespace ds_exp
             struct precondition_failed_to_satisfy : std::logic_error
             {
                 precondition_failed_to_satisfy(std::string const &function)
-   
+                    : logic_
