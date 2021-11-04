@@ -175,4 +175,5 @@ namespace ds_exp
                 precondition_failed_to_satisfy(std::string const &function)
                     : logic_error("The precondition of funciton "s + function + " failed to satisfy.")
                 {
-      
+                }
+    
