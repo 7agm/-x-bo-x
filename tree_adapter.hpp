@@ -176,4 +176,6 @@ namespace ds_exp
                     : logic_error("The precondition of funciton "s + function + " failed to satisfy.")
                 {
                 }
-    
+            };
+
+            
