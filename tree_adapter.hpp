@@ -178,4 +178,4 @@ namespace ds_exp
                 }
             };
 
-            
+            tree_adapter() =
