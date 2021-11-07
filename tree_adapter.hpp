@@ -178,4 +178,5 @@ namespace ds_exp
                 }
             };
 
-            tree_adapter() =
+            tree_adapter() = default;
+            void I
