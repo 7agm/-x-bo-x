@@ -179,4 +179,5 @@ namespace ds_exp
             };
 
             tree_adapter() = default;
-            void I
+            void InitBiTree()
+          
