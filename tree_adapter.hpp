@@ -182,4 +182,5 @@ namespace ds_exp
             void InitBiTree()
             {
                 if (tree)
-                    throw tree_exi
+                    throw tree_exists(__func__);
+          
