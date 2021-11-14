@@ -182,4 +182,4 @@ namespace ds_exp
             void InitBiTree()
             {
                 if (tree)
-           
+                    throw tree_exi
