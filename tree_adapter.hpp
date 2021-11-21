@@ -185,3 +185,4 @@ namespace ds_exp
                     throw tree_exists(__func__);
                 tree = binary_tree<element_type>();
             }
+            void D
