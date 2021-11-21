@@ -183,4 +183,5 @@ namespace ds_exp
             {
                 if (tree)
                     throw tree_exists(__func__);
-                tree = binary_tree<element_type>(
+                tree = binary_tree<element_type>();
+            }
