@@ -186,4 +186,5 @@ namespace ds_exp
                 tree = binary_tree<element_type>();
             }
             void DestroyBiTree()
-            
+            {
+                if (!tre
