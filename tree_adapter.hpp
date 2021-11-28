@@ -188,4 +188,4 @@ namespace ds_exp
             void DestroyBiTree()
             {
                 if (!tree)
-              
+                    throw tree_n
