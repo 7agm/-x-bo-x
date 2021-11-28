@@ -188,4 +188,5 @@ namespace ds_exp
             void DestroyBiTree()
             {
                 if (!tree)
-                    throw tree_not_exist(__func__)
+                    throw tree_not_exist(__func__);
+              
