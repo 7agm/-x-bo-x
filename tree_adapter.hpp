@@ -192,4 +192,5 @@ namespace ds_exp
                 tree.reset();
             }
             void CreateBiTree(std::istream &definition)
-      
+            {
+                auto
