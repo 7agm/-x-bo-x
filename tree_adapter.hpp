@@ -193,4 +193,4 @@ namespace ds_exp
             }
             void CreateBiTree(std::istream &definition)
             {
-                auto
+                auto generated_tree = t
