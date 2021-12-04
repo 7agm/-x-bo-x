@@ -191,4 +191,5 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 tree.reset();
             }
-            void CreateBiTree(std::i
+            void CreateBiTree(std::istream &definition)
+      
