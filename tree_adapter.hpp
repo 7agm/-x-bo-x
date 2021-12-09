@@ -194,4 +194,5 @@ namespace ds_exp
             void CreateBiTree(std::istream &definition)
             {
                 auto generated_tree = tree_parse<left_first_t, element_type>(definition).get_binary_tree();
-                if (!generated_t
+                if (!generated_tree)
+              
