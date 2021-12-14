@@ -196,4 +196,6 @@ namespace ds_exp
                 auto generated_tree = tree_parse<left_first_t, element_type>(definition).get_binary_tree();
                 if (!generated_tree)
                     throw parse_failed(__func__);
-                tree = generated_tre
+                tree = generated_tree;
+            }
+          
