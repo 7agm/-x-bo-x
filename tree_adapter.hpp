@@ -198,4 +198,4 @@ namespace ds_exp
                     throw parse_failed(__func__);
                 tree = generated_tree;
             }
-          
+            void CreateBiT
