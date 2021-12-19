@@ -198,4 +198,5 @@ namespace ds_exp
                     throw parse_failed(__func__);
                 tree = generated_tree;
             }
-            void CreateBiTree(std::string const &stri
+            void CreateBiTree(std::string const &string)
+          
