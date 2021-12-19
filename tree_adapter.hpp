@@ -199,4 +199,5 @@ namespace ds_exp
                 tree = generated_tree;
             }
             void CreateBiTree(std::string const &string)
-          
+            {
+               
