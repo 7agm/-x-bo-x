@@ -202,4 +202,5 @@ namespace ds_exp
             {
                 std::istringstream stream(string);
                 CreateBiTree(stream);
+            }
          
