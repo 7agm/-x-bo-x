@@ -204,4 +204,5 @@ namespace ds_exp
                 CreateBiTree(stream);
             }
             void ClearBiTree()
-    
+            {
+ 
