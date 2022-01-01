@@ -205,4 +205,5 @@ namespace ds_exp
             }
             void ClearBiTree()
             {
-                i
+                if (!tree)
+            
