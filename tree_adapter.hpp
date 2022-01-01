@@ -206,4 +206,5 @@ namespace ds_exp
             void ClearBiTree()
             {
                 if (!tree)
-                    throw tree_not_exist(__f
+                    throw tree_not_exist(__func__);
+                tre
