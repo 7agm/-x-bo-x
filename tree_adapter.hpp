@@ -211,4 +211,4 @@ namespace ds_exp
             }
             auto BiTreeEmpty() const
             {
- 
+                if
