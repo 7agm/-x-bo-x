@@ -212,4 +212,5 @@ namespace ds_exp
             auto BiTreeEmpty() const
             {
                 if (!tree)
-                    throw tree_n
+                    throw tree_not_exist(__func__);
+    
