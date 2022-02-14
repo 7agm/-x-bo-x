@@ -216,4 +216,5 @@ namespace ds_exp
                 return tree->empty();
             }
             auto BiTreeDepth() const
-      
+            {
+               
