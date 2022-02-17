@@ -218,4 +218,5 @@ namespace ds_exp
             auto BiTreeDepth() const
             {
                 if (!tree)
-                    throw tre
+                    throw tree_not_exist(__func__);
+  
