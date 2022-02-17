@@ -218,4 +218,4 @@ namespace ds_exp
             auto BiTreeDepth() const
             {
                 if (!tree)
-           
+                    throw tre
