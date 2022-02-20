@@ -222,4 +222,5 @@ namespace ds_exp
                 return tree->depth();
             }
             auto Root() const
- 
+            {
+        
