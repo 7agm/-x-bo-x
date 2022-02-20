@@ -221,4 +221,5 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 return tree->depth();
             }
-         
+            auto Root() const
+ 
