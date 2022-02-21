@@ -223,4 +223,5 @@ namespace ds_exp
             }
             auto Root() const
             {
-        
+                if (!tree)
+         
