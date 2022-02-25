@@ -224,4 +224,5 @@ namespace ds_exp
             auto Root() const
             {
                 if (!tree)
-                    throw tree_not_
+                    throw tree_not_exist(__func__);
+    
