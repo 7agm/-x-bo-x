@@ -227,4 +227,4 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 return tree->root();
             }
-            template <typename order_t = preorder_t, 
+            template <typename order_t = preorder_t, typename dir_t
