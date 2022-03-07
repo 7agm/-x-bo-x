@@ -228,4 +228,4 @@ namespace ds_exp
                 return tree->root();
             }
             template <typename order_t = preorder_t, typename dir_t = left_first_t>
-            auto &Value(key_type const &k
+            auto &Value(key_type const &key, order_t 
