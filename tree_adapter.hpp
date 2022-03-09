@@ -230,3 +230,4 @@ namespace ds_exp
             template <typename order_t = preorder_t, typename dir_t = left_first_t>
             auto &Value(key_type const &key, order_t order = order_t{}, dir_t dir = dir_t{}) const
             {
+                if (
