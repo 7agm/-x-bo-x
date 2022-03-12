@@ -231,4 +231,4 @@ namespace ds_exp
             auto &Value(key_type const &key, order_t order = order_t{}, dir_t dir = dir_t{}) const
             {
                 if (!tree)
-                
+                    throw tree_not_e
