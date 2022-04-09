@@ -235,4 +235,4 @@ namespace ds_exp
                 for (auto &element : tree_iterate(*tree, order, dir))
                     if(element == key)
                         return get_value(element);
-          
+                throw preconditio
