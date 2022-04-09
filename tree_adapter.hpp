@@ -234,4 +234,5 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 for (auto &element : tree_iterate(*tree, order, dir))
                     if(element == key)
-                        return get_
+                        return get_value(element);
+          
