@@ -235,4 +235,5 @@ namespace ds_exp
                 for (auto &element : tree_iterate(*tree, order, dir))
                     if(element == key)
                         return get_value(element);
-                throw precondition_failed_to_satisfy(
+                throw precondition_failed_to_satisfy(__func__);
+          
