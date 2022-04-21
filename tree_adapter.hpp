@@ -237,4 +237,4 @@ namespace ds_exp
                         return get_value(element);
                 throw precondition_failed_to_satisfy(__func__);
             }
-            template <typename U
+            template <typename U, typename order_t = p
