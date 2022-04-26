@@ -238,4 +238,4 @@ namespace ds_exp
                 throw precondition_failed_to_satisfy(__func__);
             }
             template <typename U, typename order_t = preorder_t, typename dir_t = left_first_t>
-            void Assign(key_type
+            void Assign(key_type const &key, U &&value,
