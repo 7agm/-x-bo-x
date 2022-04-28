@@ -240,4 +240,5 @@ namespace ds_exp
             template <typename U, typename order_t = preorder_t, typename dir_t = left_first_t>
             void Assign(key_type const &key, U &&value, order_t order = order_t{}, dir_t dir = dir_t{})
             {
-         
+                if (!tree)
+       
