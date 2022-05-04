@@ -241,4 +241,5 @@ namespace ds_exp
             void Assign(key_type const &key, U &&value, order_t order = order_t{}, dir_t dir = dir_t{})
             {
                 if (!tree)
-                    throw tree_not_exist(__fun
+                    throw tree_not_exist(__func__);
+              
