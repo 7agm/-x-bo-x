@@ -244,4 +244,5 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 if (auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key))
                     get_value(*iter) = std::forward<U>(value);
-               
+                else
+            
