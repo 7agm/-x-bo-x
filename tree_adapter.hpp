@@ -245,4 +245,5 @@ namespace ds_exp
                 if (auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key))
                     get_value(*iter) = std::forward<U>(value);
                 else
-                    throw precondition_failed_to_satisfy(_
+                    throw precondition_failed_to_satisfy(__func__);
+ 
