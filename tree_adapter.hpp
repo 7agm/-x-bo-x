@@ -248,4 +248,5 @@ namespace ds_exp
                     throw precondition_failed_to_satisfy(__func__);
             }
 
-            template <typename order_t = preorder_t, typename dir_t
+            template <typename order_t = preorder_t, typename dir_t = left_first_t>
+  
