@@ -255,4 +255,4 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 if (auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key))
                     return iter.parent();
-                throw precondi
+                throw precondition_failed_to_satisf
