@@ -257,4 +257,4 @@ namespace ds_exp
                     return iter.parent();
                 throw precondition_failed_to_satisfy(__func__);
             }
-            template <type
+            template <typename child_t, typen
