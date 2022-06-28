@@ -257,4 +257,5 @@ namespace ds_exp
                     return iter.parent();
                 throw precondition_failed_to_satisfy(__func__);
             }
-            template <typename child_t, typename order_t = preorder_t, typename dir_t = left_fi
+            template <typename child_t, typename order_t = preorder_t, typename dir_t = left_first_t>
+            auto Chil
