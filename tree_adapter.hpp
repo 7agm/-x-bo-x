@@ -261,4 +261,4 @@ namespace ds_exp
             auto Child(key_type const &key, child_t child = child_t{}, order_t order = order_t{}, dir_t dir = dir_t{}) const
             {
                 if (!tree)
-                    throw
+                    throw tree_not_exist(_
