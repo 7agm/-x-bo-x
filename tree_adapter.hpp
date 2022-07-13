@@ -262,4 +262,5 @@ namespace ds_exp
             {
                 if (!tree)
                     throw tree_not_exist(__func__);
-                if (auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key)
+                if (auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key))
+                   
