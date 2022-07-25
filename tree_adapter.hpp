@@ -266,4 +266,4 @@ namespace ds_exp
                     return iter.first_child(child);
                 throw precondition_failed_to_satisfy(__func__);
             }
-            template <typename child_t,
+            template <typename child_t, typename order_t = preorde
