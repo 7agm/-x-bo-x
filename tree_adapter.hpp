@@ -267,4 +267,4 @@ namespace ds_exp
                 throw precondition_failed_to_satisfy(__func__);
             }
             template <typename child_t, typename order_t = preorder_t, typename dir_t = left_first_t>
-            auto Sibling(key_type const &key, child_t child = child_t{}, order_t 
+            auto Sibling(key_type const &key, child_t child = child_t{}, order_t order = order_t{}
