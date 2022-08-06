@@ -270,4 +270,4 @@ namespace ds_exp
             auto Sibling(key_type const &key, child_t child = child_t{}, order_t order = order_t{}, dir_t dir = dir_t{}) const
             {
                 if (!tree)
-                    throw tre
+                    throw tree_not_exist(__func__
