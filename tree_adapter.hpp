@@ -276,4 +276,5 @@ namespace ds_exp
                     auto desired_child = iter.parent().first_child(child);
                     if (desired_child == iter)
                         return tree->end(order, dir);
-                    retur
+                    return desired_child;
+    
