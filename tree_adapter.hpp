@@ -274,4 +274,4 @@ namespace ds_exp
                 if (auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key))
                 {
                     auto desired_child = iter.parent().first_child(child);
-               
+                    if (desired_chi
