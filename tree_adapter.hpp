@@ -279,4 +279,5 @@ namespace ds_exp
                     return desired_child;
                 }
                 throw precondition_failed_to_satisfy(__func__);
-  
+            }
+    
