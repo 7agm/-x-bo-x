@@ -278,4 +278,5 @@ namespace ds_exp
                         return tree->end(order, dir);
                     return desired_child;
                 }
-                throw precondition_failed_t
+                throw precondition_failed_to_satisfy(__func__);
+  
