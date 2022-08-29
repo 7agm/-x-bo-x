@@ -280,4 +280,4 @@ namespace ds_exp
                 }
                 throw precondition_failed_to_satisfy(__func__);
             }
-    
+            template <typenam
