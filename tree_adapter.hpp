@@ -281,4 +281,4 @@ namespace ds_exp
                 throw precondition_failed_to_satisfy(__func__);
             }
             template <typename child_t, typename iter, typename dir_t = right_t>
-            void InsertChild(iter pos, tree_adapter inserted, child
+            void InsertChild(iter pos, tree_adapter inserted, child_t child = child_t{},
