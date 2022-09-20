@@ -287,4 +287,4 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 auto replaced = tree->replace_child(pos, std::move(inserted.tree.value()), child);
                 auto farest = tree->begin(inorder, dir);
-                auto empty = tree->replace_child(fare
+                auto empty = tree->replace_child(farest, std::move(replaced), dir);
