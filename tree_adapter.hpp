@@ -285,4 +285,5 @@ namespace ds_exp
             {
                 if (!tree)
                     throw tree_not_exist(__func__);
-                auto replaced = tree->replace_child(pos, std::move(inserted.tree.value()),
+                auto replaced = tree->replace_child(pos, std::move(inserted.tree.value()), child);
+           
