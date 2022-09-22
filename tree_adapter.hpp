@@ -288,4 +288,6 @@ namespace ds_exp
                 auto replaced = tree->replace_child(pos, std::move(inserted.tree.value()), child);
                 auto farest = tree->begin(inorder, dir);
                 auto empty = tree->replace_child(farest, std::move(replaced), dir);
-                assert(empty.empty
+                assert(empty.empty());
+            }
+         
