@@ -290,4 +290,5 @@ namespace ds_exp
                 auto empty = tree->replace_child(farest, std::move(replaced), dir);
                 assert(empty.empty());
             }
-            template <typename child_t, 
+            template <typename child_t, typename iter>
+      
