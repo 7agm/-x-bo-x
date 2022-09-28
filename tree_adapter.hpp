@@ -291,4 +291,5 @@ namespace ds_exp
                 assert(empty.empty());
             }
             template <typename child_t, typename iter>
-            auto DeleteChild(iter pos, child_t ch
+            auto DeleteChild(iter pos, child_t child = child_t{})
+         
