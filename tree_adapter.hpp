@@ -294,4 +294,4 @@ namespace ds_exp
             auto DeleteChild(iter pos, child_t child = child_t{})
             {
                 if (!tree)
-                 
+                    throw tree_n
