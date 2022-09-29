@@ -292,4 +292,5 @@ namespace ds_exp
             }
             template <typename child_t, typename iter>
             auto DeleteChild(iter pos, child_t child = child_t{})
-         
+            {
+                if (!
