@@ -294,4 +294,5 @@ namespace ds_exp
             auto DeleteChild(iter pos, child_t child = child_t{})
             {
                 if (!tree)
-                    throw tree_n
+                    throw tree_not_exist(__func__);
+   
