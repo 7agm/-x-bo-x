@@ -297,4 +297,4 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 return tree_adapter(tree->replace_child(pos, tree_type{}, child));
             }
-            te
+            template <typename
