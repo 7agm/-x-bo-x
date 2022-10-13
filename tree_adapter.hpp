@@ -298,4 +298,4 @@ namespace ds_exp
                 return tree_adapter(tree->replace_child(pos, tree_type{}, child));
             }
             template <typename Callable, typename order_t, typename dir_t = left_first_t>
-            void Trave
+            void Traverse(Callable callable, 
