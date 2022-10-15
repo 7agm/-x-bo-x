@@ -300,4 +300,5 @@ namespace ds_exp
             template <typename Callable, typename order_t, typename dir_t = left_first_t>
             void Traverse(Callable callable, order_t order, dir_t dir = dir_t{})
             {
-            
+                if (!tree)
+               
