@@ -301,4 +301,4 @@ namespace ds_exp
             void Traverse(Callable callable, order_t order, dir_t dir = dir_t{})
             {
                 if (!tree)
-               
+                    throw tree_
