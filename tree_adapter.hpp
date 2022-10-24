@@ -305,4 +305,4 @@ namespace ds_exp
                 for(auto &element : tree_iterate(*tree, order, dir))
                     callable(element);
             }
-            template <typename Callable, t
+            template <typename Callable, typename dir_t = lef
