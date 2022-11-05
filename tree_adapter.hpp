@@ -309,4 +309,4 @@ namespace ds_exp
             void LevelOrderTraverse(Callable callable, dir_t dir = dir_t{})
             {
                 if (!tree)
-       
+                    thro
