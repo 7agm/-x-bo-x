@@ -312,4 +312,5 @@ namespace ds_exp
                     throw tree_not_exist(__func__);
                 auto iter = tree->root(preorder, dir);
                 if(!iter)
-              
+                    return;
+        
