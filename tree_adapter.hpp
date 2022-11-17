@@ -313,4 +313,5 @@ namespace ds_exp
                 auto iter = tree->root(preorder, dir);
                 if(!iter)
                     return;
-                std::queue<decltype(iter)> queue
+                std::queue<decltype(iter)> queue;
+                queue.p
