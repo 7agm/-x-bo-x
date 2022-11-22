@@ -318,4 +318,4 @@ namespace ds_exp
                 while (!queue.empty())
                 {
                     iter = queue.front(), queue.pop();
-                    i
+                    if (iter.first_child(dir))
