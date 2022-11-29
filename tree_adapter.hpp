@@ -320,4 +320,4 @@ namespace ds_exp
                     iter = queue.front(), queue.pop();
                     if (iter.first_child(dir))
                         queue.push(iter.first_child(dir));
-                    
+                    if (iter.second_child
