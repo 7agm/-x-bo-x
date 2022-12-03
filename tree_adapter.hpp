@@ -321,4 +321,4 @@ namespace ds_exp
                     if (iter.first_child(dir))
                         queue.push(iter.first_child(dir));
                     if (iter.second_child(dir))
-                        queue.pus
+                        queue.push(iter.second_child(dir
