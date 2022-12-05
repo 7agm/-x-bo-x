@@ -322,4 +322,4 @@ namespace ds_exp
                         queue.push(iter.first_child(dir));
                     if (iter.second_child(dir))
                         queue.push(iter.second_child(dir));
-                  
+                    callable(*iter)
