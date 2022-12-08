@@ -326,4 +326,5 @@ namespace ds_exp
                 }
             }
 
-            template <typename order_t = preorder_t, typename
+            template <typename order_t = preorder_t, typename dir_t = left_first_t>
+  
