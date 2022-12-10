@@ -330,4 +330,4 @@ namespace ds_exp
             auto get_iterator(key_type const &key, order_t order = order_t{}, dir_t dir = dir_t{})
             {
                 if(auto iter = std::find(tree->begin(order, dir), tree->end(order, dir), key))
-  
+                    re
