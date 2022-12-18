@@ -333,4 +333,5 @@ namespace ds_exp
                     return iter;
                 throw precondition_failed_to_satisfy(__func__);
             }
-            template <typename order_t = preorder_t, typename dir_t = left_firs
+            template <typename order_t = preorder_t, typename dir_t = left_first_t>
+            auto
