@@ -334,4 +334,4 @@ namespace ds_exp
                 throw precondition_failed_to_satisfy(__func__);
             }
             template <typename order_t = preorder_t, typename dir_t = left_first_t>
-            auto get_end_iterato
+            auto get_end_iterator(order_t order = order_t
