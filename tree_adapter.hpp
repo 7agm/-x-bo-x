@@ -337,4 +337,4 @@ namespace ds_exp
             auto get_end_iterator(order_t order = order_t{}, dir_t dir = dir_t{})
             {
                 if(!tree)
-                    throw precondition_
+                    throw precondition_failed_to_satisfy(__
