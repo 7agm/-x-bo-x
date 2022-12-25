@@ -341,4 +341,4 @@ namespace ds_exp
                 return tree->end(order, dir);
             }
 
-            friend b
+            friend bool operator==(tre
