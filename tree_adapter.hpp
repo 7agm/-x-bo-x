@@ -338,4 +338,7 @@ namespace ds_exp
             {
                 if(!tree)
                     throw precondition_failed_to_satisfy(__func__);
-                return tree->end(order, di
+                return tree->end(order, dir);
+            }
+
+ 
