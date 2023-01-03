@@ -344,4 +344,6 @@ namespace ds_exp
             friend bool operator==(tree_adapter const &lhs, tree_adapter const &rhs)
             {
                 return *lhs.tree == *rhs.tree;
-    
+            }
+
+         
