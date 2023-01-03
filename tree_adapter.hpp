@@ -346,4 +346,4 @@ namespace ds_exp
                 return *lhs.tree == *rhs.tree;
             }
 
-            friend std::ostream 
+            friend std::ostream &operator<<(std::ost
