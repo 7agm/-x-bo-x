@@ -346,4 +346,6 @@ namespace ds_exp
                 return *lhs.tree == *rhs.tree;
             }
 
-            friend std::ostream &operator<<(std::ostream &out, tree_adapter const&tree
+            friend std::ostream &operator<<(std::ostream &out, tree_adapter const&tree)
+            {
+    
