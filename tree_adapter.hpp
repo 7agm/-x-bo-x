@@ -351,4 +351,5 @@ namespace ds_exp
                 if(!tree.tree)
                     out << 0 << " ";
                 else
-              
+                {
+                    out << 1
