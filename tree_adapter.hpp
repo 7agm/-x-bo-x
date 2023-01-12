@@ -352,4 +352,5 @@ namespace ds_exp
                     out << 0 << " ";
                 else
                 {
-                    out << 1 << " " << tree.tr
+                    out << 1 << " " << tree.tree.value();
+         
