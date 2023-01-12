@@ -349,4 +349,5 @@ namespace ds_exp
             friend std::ostream &operator<<(std::ostream &out, tree_adapter const&tree)
             {
                 if(!tree.tree)
-                    out << 0 << " "
+                    out << 0 << " ";
+                el
