@@ -354,4 +354,4 @@ namespace ds_exp
                 {
                     out << 1 << " " << tree.tree.value();
                 }
-           
+                return out;
