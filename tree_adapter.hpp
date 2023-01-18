@@ -356,4 +356,4 @@ namespace ds_exp
                 }
                 return out;
             }
-            frie
+            friend std::istream &op
