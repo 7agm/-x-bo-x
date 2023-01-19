@@ -356,4 +356,5 @@ namespace ds_exp
                 }
                 return out;
             }
-            friend std::istream &operator>>(std::istream &in, tree_adap
+            friend std::istream &operator>>(std::istream &in, tree_adapter &tree)
+            {
