@@ -358,3 +358,4 @@ namespace ds_exp
             }
             friend std::istream &operator>>(std::istream &in, tree_adapter &tree)
             {
+                i
