@@ -361,4 +361,5 @@ namespace ds_exp
                 int has_tree = 0;
                 in >> has_tree;
                 if(!has_tree)
-                    tree.tree.r
+                    tree.tree.reset();
+              
