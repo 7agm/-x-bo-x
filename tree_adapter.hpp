@@ -362,4 +362,5 @@ namespace ds_exp
                 in >> has_tree;
                 if(!has_tree)
                     tree.tree.reset();
-              
+                else
+             
