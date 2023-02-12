@@ -364,4 +364,4 @@ namespace ds_exp
                     tree.tree.reset();
                 else
                 {
-                    
+                    tree.tree = tr
