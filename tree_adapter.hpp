@@ -365,4 +365,5 @@ namespace ds_exp
                 else
                 {
                     tree.tree = tree_type{};
-                  
+                    in >> tree.tree.value();
+     
