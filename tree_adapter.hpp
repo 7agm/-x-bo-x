@@ -367,4 +367,5 @@ namespace ds_exp
                     tree.tree = tree_type{};
                     in >> tree.tree.value();
                 }
-          
+                return in;
+        
