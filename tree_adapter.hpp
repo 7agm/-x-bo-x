@@ -368,4 +368,9 @@ namespace ds_exp
                     in >> tree.tree.value();
                 }
                 return in;
-        
+            }
+        };
+    }
+}
+
+#end
