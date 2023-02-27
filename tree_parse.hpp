@@ -63,3 +63,27 @@ namespace ds_exp
         template <>
         inline void assign_element(std::string str, std::string &v)
         {
+            v = std::move(str);
+        }
+
+        namespace detail
+        {
+
+            inline void eat_space(std::istream &in)
+            {
+                while (in && std::isspace(in.peek()))
+                    in.get();
+            }
+            inline bool read_char(std::istream &in, char c)
+            {
+                eat_space(in);
+                if (in && in.peek() == c)
+                    return in.get(), true;
+                else
+                    return false;
+            }
+            inline void force_read_char(std::istream &in, char c)
+            {
+                if (!read_char(in, c))
+                    throw expect_failed(std::string() + c);
+            }
