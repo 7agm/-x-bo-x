@@ -46,3 +46,20 @@ namespace ds_exp
                 }
                 ~final_call()
                 {
+                    call();
+                }
+                U call;
+            };
+        }
+
+        template <typename value>
+        void assign_element(std::string str, value &v)
+        {
+            std::istringstream stream(str);
+            stream >> v;
+            if (!stream)
+                throw parse_failed();
+        }
+        template <>
+        inline void assign_element(std::string str, std::string &v)
+        {
