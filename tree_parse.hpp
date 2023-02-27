@@ -170,3 +170,22 @@ namespace ds_exp
                 {
                     tree.replace_child(tree.root(), get_subtree(std::move(element.value())), dir{});
                 }
+            }
+            std::optional<value_type> get_element()
+            {
+                if (is_null())
+                    return std::nullopt;
+                else
+                    return read_element();
+            }
+            bool is_null()
+            {
+                return detail::read_word(source, "null");
+            }
+
+            value_type read_element()
+            {
+                std::string input;
+                if (detail::read_char(source, '('))
+                {
+                    input = detail::read_until(source, false, ')');
