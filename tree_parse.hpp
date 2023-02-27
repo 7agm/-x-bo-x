@@ -142,3 +142,31 @@ namespace ds_exp
             }
             std::optional<tree_type> get_binary_tree()
             {
+                detail::force_read_char(source, '[');
+                auto _ = detail::final_call{[=]
+                                            { detail::force_read_char(source, ']'); }};
+                if (auto element = get_element())
+                {
+                    auto tree = get_subtree(std::move(element.value()));
+                    return tree;
+                } else
+                    return std::nullopt;
+            }
+
+        private:
+            tree_type get_subtree(value_type &&parent_element)
+            {
+                tree_type tree;
+                tree.set_root(parent_element);
+                fill_child<direction>(tree);
+                fill_child<typename direction::inverse>(tree);
+                return tree;
+            }
+            template <typename dir>
+            void fill_child(tree_type &tree)
+            {
+                detail::force_read_char(source, ',');
+                if (auto element = get_element())
+                {
+                    tree.replace_child(tree.root(), get_subtree(std::move(element.value())), dir{});
+                }
