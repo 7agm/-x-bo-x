@@ -22,3 +22,27 @@ namespace ds_exp
             }
         };
         struct expect_failed : std::domain_error
+        {
+            expect_failed(std::string const &s)
+                : domain_error("expect '"s + s + "' but got something else.")
+            {
+            }
+        };
+        struct unexpected_end : std::domain_error
+        {
+            unexpected_end()
+                : domain_error("unexpected end of string when parsing.")
+            {
+            }
+        };
+        namespace detail
+        {
+            template <typename U>
+            struct final_call
+            {
+                final_call(U c)
+                    : call(c)
+                {
+                }
+                ~final_call()
+                {
