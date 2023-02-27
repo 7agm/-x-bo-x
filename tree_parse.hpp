@@ -116,3 +116,29 @@ namespace ds_exp
                 return str;
             }
             inline bool read_word(std::istream &in, std::string_view word)
+            {
+                auto recover = in.tellg();
+                detail::eat_space(in);
+                std::size_t pos = 0;
+                while (in && in.get() == word[pos])
+                    if (++pos == word.size())
+                        return true;
+                in.seekg(recover);
+                return false;
+            }
+        }
+
+        template <typename direction, typename T>
+        class tree_parse
+        {
+            using tree_type = binary_tree<T>;
+            using value_type = typename tree_type::value_type;
+            std::istream &source;
+
+        public:
+            explicit tree_parse(std::istream &in)
+                : source(in)
+            {
+            }
+            std::optional<tree_type> get_binary_tree()
+            {
