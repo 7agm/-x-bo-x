@@ -189,3 +189,15 @@ namespace ds_exp
                 if (detail::read_char(source, '('))
                 {
                     input = detail::read_until(source, false, ')');
+                    detail::force_read_char(source, ')');
+                } else
+                    input = detail::read_until(source, false, ',', ']');
+                value_type result;
+                assign_element(std::move(input), result);
+                return result;
+            }
+        };
+    }
+
+}
+#endif //INC_201703_TREE_PARSE_HPP
