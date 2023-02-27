@@ -105,3 +105,14 @@ namespace ds_exp
                 std::string str;
                 while (in && ((in.peek() != stop) && ...))
                 {
+                    if (skip_backslash)
+                        unescape(in, '\\', stop...);
+                    else
+                        unescape(in, stop...);
+                    char c = in.get();
+                    if (in)
+                        str.push_back(c);
+                }
+                return str;
+            }
+            inline bool read_word(std::istream &in, std::string_view word)
