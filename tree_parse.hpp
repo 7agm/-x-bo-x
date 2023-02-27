@@ -87,3 +87,21 @@ namespace ds_exp
                 if (!read_char(in, c))
                     throw expect_failed(std::string() + c);
             }
+            template <typename ...Escaped>
+            void unescape(std::istream &in, Escaped ...escaped)
+            {
+                if (in.peek() == '\\')
+                {
+                    auto pos = in.tellg();
+                    in.get();
+                    if (((in.peek() == escaped) || ...))
+                        return;
+                    in.seekg(pos);
+                }
+            }
+            template <typename ...Stops>
+            std::string read_until(std::istream &in, bool skip_backslash, Stops ...stop)
+            {
+                std::string str;
+                while (in && ((in.peek() != stop) && ...))
+                {
